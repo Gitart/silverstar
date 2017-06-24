@@ -9,7 +9,8 @@ curl  -X POST \
       https://www.streak.com/api/v1/boxes/{boxKey}
 ```      
 
-Requseet sample
+## Request sample
+
 ```
 {
   "pipelineKey": "agptYWlsZm9vZ2FlcioLEgxPcmdhbml6YXRpb24iCnN0cmVhay5jb20MCxIIV29ya2Zsb3cYPww",
