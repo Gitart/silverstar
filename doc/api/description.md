@@ -7,15 +7,18 @@
 
 
 ## Error Codes
-
-If a call to the Streak API causes an error, the most appropriate HTTP status code is set in the response and a JSON object is returned with details about the error. HTTP status codes in the 200's mean a successful call to the API, status codes in the 400's mean there was a problem with the the parameters in the API call and status codes in the 500's mean there was an issue with Streak servers. In any case, a JSON object is returned in the response. Below is a table of possible status codes:
+Если вызов API вызывает ошибку, в ответе задается наиболее подходящий код состояния HTTP, и объект JSON возвращается с подробностями об ошибке. Коды состояния HTTP в 200-х годах означают успешный вызов API, коды статуса в 400-х годах означают, что проблема с параметрами в кодах API и кодах статуса в значении 500 означает, что проблема была с серверами Streak. В любом случае объект JSON возвращается в ответ. Ниже приведена таблица возможных кодов состояния:
 
 |Status Code|	Description|
-|----|---|
+|------|---|
 |200|	Success
 |400|	Bad Request. This usually occurs when trying to access the API over http instead of https.
 |401|	Unauthorized. Either the api key provided does not have access to the resource or the provided API key is invalid.
 |404|	Not Found. The resource requested was not found.
 
+## Используется класический метод аутонтификации
+[Basic Method](https://en.wikipedia.org/wiki/Basic_access_authentication)
 
-[Пример описания API](https://www.streak.com/api/#pipeline)
+## Примеры и пояснения
+[Пример описания API](https://www.streak.com/api/#pipeline)  
+
