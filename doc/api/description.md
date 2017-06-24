@@ -16,6 +16,16 @@
 |401|	Unauthorized. Either the api key provided does not have access to the resource or the provided API key is invalid.
 |404|	Not Found. The resource requested was not found.
 
+## Описание сущьностей в системе
+|Сущьность|	Описание|
+|------|---|
+|Справочник |Получение информации о свободном месте в размещении	
+|400|	
+|401|	
+|404|	
+
+
+
 ## Используется класический метод аутонтификации
 [Basic Method](https://en.wikipedia.org/wiki/Basic_access_authentication)
 
