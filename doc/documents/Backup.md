@@ -1,15 +1,11 @@
 **Концепция и план развития информационного сервиса**
 
-#HEAD OFFICE
-##REST API сервис
-####Backup
+# BACKUP DOCS
+## REST API сервис
+#### Backup
 
-“Cофтинформ”
-
+“SERVICE INFORMATION”
 Draft 
-
-Автор : Савченко Артур
-
 
 **Оглавление**
 
@@ -26,7 +22,7 @@ Draft
 
 
 
-#Введение
+# Введение
 **Архивация** - Важная системная функция которая позволит сохранить данные в критических ситуациях. Суть вопроса заключается в архивировании критической информации и сбережения ее в отдельном сервере. 
 
 
@@ -44,7 +40,7 @@ Draft
     tar cvf db.tar BACKUP
 
     ## Copy to FTP
-    curl -O -T db.tar  ftp://artur_savchenko:12345678password@10.0.10.10/backup_savchenko/DB/
+    curl -O -T db.tar  ftp://backupserverlogin:12345678password@10.0.10.10/backup/DB/
 
     ## Delete file form disk
     ## Удаление файла после его передачи на фтп сервер 
@@ -54,7 +50,7 @@ Draft
 
 
 Пример с директориями :   
-####tar -c -z --recursion -p --file=backup.tar directory1 directory2 directory3
+#### tar -c -z --recursion -p --file=backup.tar directory1 directory2 directory3
 
 **Пример**   
 http://stackoverflow.com/questions/984204/shell-command-to-tar-directory-excluding-certain-files-folders
@@ -64,18 +60,12 @@ http://www.thegeekstuff.com/2012/04/curl-examples/
 
 
 
-
-
-----------
-
-
-
-#[Пример на статьи](http://habrahabr.ru/company/nqhost/blog/117771/)
+# [Пример на статьи](http://habrahabr.ru/company/nqhost/blog/117771/)
 **Простой способ резервного копирования Linux-сервера с выгрузкой файлов по FTP**
 
 Простой способ резервного копирования Linux-сервера с выгрузкой файлов по FTP
 
-Блог компании NQhost
+## Блог компании NQhost
 
 О важности регулярного резервного копирования уже сказано очень много слов. В этой статье мы предлагаем вниманию читателей примеры простых скриптов для бэкапа файлов и баз данных MySQL с последующей выгрузкой архивов на удаленный FTP-сервер. 
 Несмотря на то что мы в NQhost предлагаем решения по сохранению snapshot'ов VPS-контейнеров, процесс бэкапа собственными силами — безусловно важнейшая вещь.
@@ -215,16 +205,16 @@ http://www.thegeekstuff.com/2012/04/curl-examples/
 
 Результат работы скрипта — файл в директории /root/backup/server вида mysql-ГГГГММДД.tar.gz содержащий в себе tar-архивы c дампами всех баз данных и его выгрузка на FTP-сервер.
 
-##Автоматизация
+## Автоматизация
 Сохраняем данные скрипты в директорию /etc/cron.daily, предварительно проверив в файле /etc/crontab, что именно из этой директории запускаются скрипты каждый день.
 
-##Заключение
+## Заключение
 
 Конечно, в каждом конкретном случае скрипты могут меняться и приведенные примеры лишь один из многочисленных вариантов организации резервного копирования. 
 Надеемся, что после прочтения этой статьи вы задумаетесь над собственным решением бэкапа, если по каким-то причинам еще не организовали этот важнейший процесс.
 
 
-##Пример
+## Пример
 	#!/bin/bash
 	
 	cd /home/Backup
@@ -248,13 +238,13 @@ http://www.thegeekstuff.com/2012/04/curl-examples/
 Запуск по крону каждую ночь, понятно.
 
 
-##TAR  
+## TAR  
 Пример
 
     tar czvf VPSbackup.tar.gz -N"$LAST" --exclude-from=/VPSbackups/tar.excludelist.txt /etc/ /root/exportdb/ /home/username/ > /root/VPSbackups/backup.log 2>&1   
 
-    ##где tar.excludelist.txt - список исключений;  
-    ##а LAST - файл с датой в формате date +'%F %R:%S'  
+    ## где tar.excludelist.txt - список исключений;  
+    ## LAST - файл с датой в формате date +'%F %R:%S'  
     
     LAST=`cat /root/VPSbackups/lasttimebackup.log` 
 
@@ -301,7 +291,7 @@ http://www.thegeekstuff.com/2012/04/curl-examples/
 
 ----------
 
-#Примеры
+# Примеры
 
 
 **Создание архивов: программа tar**
