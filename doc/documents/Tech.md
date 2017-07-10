@@ -1,7 +1,7 @@
 #Техническое описание 
 
-#BASE SERVICE   
-##API сервис    
+# BASE SERVICE   
+## API сервис    
  Draft 
 	Введение  
 	Запуск сервиса с начала  
@@ -86,7 +86,4 @@ $ rethinkdb restore -c HOST:PORT rethinkdb_dump_DATE_TIME.tar.gz
 
     curl -X POST http://0.0.0.00:5555/add/doc/xxxxxx   -T "docs.json" 
     -H "Content-Type: application/json; charset=utf-8;" 
-
-Каждая запись аптеки должна иметь ID_STRUCTURE
-
-
+Каждая запись должна иметь IDSTRUCTURE
