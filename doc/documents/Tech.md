@@ -56,7 +56,7 @@ $ rethinkdb restore -c HOST:PORT rethinkdb_dump_DATE_TIME.tar.gz
 
 |Таблица|Назначение |Primary|Indexes|
 |------|------|------|----|
-|A_000000|Данные по точке хранится каждая в отдельной таб|ID|DOC_DATE_TIME,ID_DRUG 
+|A_000000|Данные по точке хранится каждая в отдельной таб|ID|DOC_DATE, ID_DOC 
 |Aliance|Справочник альянсов|id||
 |ssplan|Справочник ассортиментного плана|id
 |Contractors|Справочник аптек|ID
